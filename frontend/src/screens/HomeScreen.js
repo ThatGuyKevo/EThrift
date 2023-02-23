@@ -7,6 +7,8 @@ import { Helmet } from "react-helmet-async";
 import LoadingBox from "../components/LoadingBox";
 import MessageBox from "../components/MessageBox";
 import { motion } from "framer-motion";
+import "../index.css";
+import YoutubeEmbed from "../components/YoutubeEmbed";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -67,6 +69,7 @@ function HomeScreen() {
           </Row>
         )}
       </div>
+      <YoutubeEmbed embedId="ad-GuV6YIMI" />
     </div>
   );
 }
