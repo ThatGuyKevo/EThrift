@@ -62,6 +62,8 @@ export default function ShippingAddressScreen() {
           <Form.Group className="mb-3" controlId="fullName">
             <Form.Label>Full Name</Form.Label>
             <Form.Control
+              type="text"
+              placeholder="Enter Name"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
               required
@@ -70,6 +72,8 @@ export default function ShippingAddressScreen() {
           <Form.Group className="mb-3" controlId="address">
             <Form.Label>Address</Form.Label>
             <Form.Control
+              type="text"
+              placeholder="Enter Address"
               value={address}
               onChange={(e) => setAddress(e.target.value)}
               required
@@ -78,6 +82,8 @@ export default function ShippingAddressScreen() {
           <Form.Group className="mb-3" controlId="city">
             <Form.Label>City</Form.Label>
             <Form.Control
+              type="text"
+              placeholder="Enter City"
               value={city}
               onChange={(e) => setCity(e.target.value)}
               required
@@ -86,6 +92,8 @@ export default function ShippingAddressScreen() {
           <Form.Group className="mb-3" controlId="postalCode">
             <Form.Label>Postal Code</Form.Label>
             <Form.Control
+              type="number"
+              placeholder="Enter Postal Code"
               value={postalCode}
               onChange={(e) => setPostalCode(e.target.value)}
               required
@@ -94,6 +102,8 @@ export default function ShippingAddressScreen() {
           <Form.Group className="mb-3" controlId="country">
             <Form.Label>Country</Form.Label>
             <Form.Control
+              type="text"
+              placeholder="Enter Country"
               value={country}
               onChange={(e) => setCountry(e.target.value)}
               required
