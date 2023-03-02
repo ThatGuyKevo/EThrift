@@ -133,6 +133,32 @@ function App() {
               </Navbar.Collapse>
             </Container>
           </Navbar>
+
+          <Navbar bg="light" variant="light" expand="lg">
+            <Nav className="me-auto  w-10  justify-content-end">
+              <Navbar.Brand className="nav-link">
+                Featured Websites{" "}
+              </Navbar.Brand>
+              <Link
+                to={{ pathname: "https://www.nike.com/" }}
+                target="_blank"
+                className="nav-link">
+                Nike
+              </Link>
+              <Link
+                to={{ pathname: "https://www.adidas.com/us" }}
+                target="_blank"
+                className="nav-link">
+                Adidas
+              </Link>
+              <Link
+                to={{ pathname: "https://www.thenorthface.com/en-us" }}
+                target="_blank"
+                className="nav-link">
+                NorthFace
+              </Link>
+            </Nav>
+          </Navbar>
         </header>
         <div
           className={
