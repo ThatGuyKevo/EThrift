@@ -24,7 +24,10 @@ const reducer = (state, action) => {
     case "CREATE_REQUEST":
       return { ...state, loadingCreateReview: true };
     case "CREATE_SUCCESS":
-      return { ...state, loadingCreateReview: false };
+      return {
+        ...state,
+        loadingCreateReview: false,
+      };
     case "CREATE_FAIL":
       return { ...state, loadingCreateReview: false };
     case "FETCH_REQUEST":
@@ -53,6 +56,8 @@ function ProductScreen() {
       loading: true,
       error: "",
     });
+
+  const current_category = product.category;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -204,6 +209,14 @@ function ProductScreen() {
         </Col>
       </Row>
       <div className="my-3">
+        <h2>
+          Like this item? Shop more in :
+          <Link
+            to={`/search?category=${current_category}&query=all&price=all&rating=all&order=newest&page=1`}>
+            {current_category} Department
+          </Link>
+          .
+        </h2>
         <h2 ref={reviewsRef}>Reviews</h2>
         <div className="mb-3">
           {product.reviews.length === 0 && (
